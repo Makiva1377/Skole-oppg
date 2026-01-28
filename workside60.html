@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Kode 2 – Enkle oppgaver</title>
+</head>
+<body>
+
+<script>
+
+  document.body.style.backgroundColor = "Red";
+  // 1. Rektangel
+  var hoyde = 5;
+  var bredde = 10;
+
+  // areal = høyde * bredde
+  var areal = hoyde * bredde;
+  document.write("Arealet er " + areal + "<br>");
+
+  /* omkrets = 2 * (høyde + bredde) */
+  var omkrets = 2 * (hoyde + bredde);
+  document.write("Omkretsen er " + omkrets + "<br><br>");
+
+  // 2. Tilfeldige tall med Math.random()
+
+  // a) 1–6 (terning)
+  var terning = Math.floor(Math.random() * 6) + 1;
+  document.write("Terning: " + terning + "<br>");
+
+  // b) 0–10
+  var tall0_10 = Math.floor(Math.random() * 11);
+  document.write("Tall 0–10: " + tall0_10 + "<br>");
+
+  // c) 10–20
+  var tall10_20 = Math.floor(Math.random() * 11) + 10;
+  document.write("Tall 10–20: " + tall10_20 + "<br><br>");
+
+  // 3. Kule (radius fra bruker)
+  var r = prompt("Skriv inn radius til kula:");
+
+  // Omkrets
+  var kuleOmkrets = 2 * Math.PI * r;
+
+  // volum
+  var volum = (4 / 3) * Math.PI * r * r * r;
+
+  // Overflateareal
+  var overflate = 4 * Math.PI * r * r;
+
+  document.write("Omkrets av kula: " + kuleOmkrets + "<br>");
+  document.write("Volum av kula: " + volum + "<br>");
+  document.write("Overflateareal: " + overflate + "<br><br>");
+
+  // 4. Karakterkalkulator
+  var poeng = prompt("Skriv inn antall poeng:");
+  var maksPoeng = prompt("Skriv inn antall mulige poeng:");
+
+  var karakter = Math.round((poeng * 6) / maksPoeng);
+  document.write("Karakteren er: " + karakter + "<br><br>");
+
+  // 5. KMI-kalkulator
+  var vekt = prompt("Skriv inn vekt i kg:");
+  var hoydeMeter = prompt("Skriv inn høyde i meter:");
+
+  // KMI = vekt / (høyde * høyde)
+  var kmi = vekt / (hoydeMeter * hoydeMeter);
+  document.write("KMI er: " + kmi);
+
+</script>
+
+</body>
+</html>

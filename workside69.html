@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>p-element og prompt</title>
+</head>
+<body>
+
+<p id="Natur"></p>
+<p id="Svar"></p>
+
+<script>
+
+document.body.style.backgroundColor = "Green";
+
+  // 1a) Variabel som peker på p-elementet
+  var naturElement = document.getElementById("Natur");
+
+  // 1b) Legg inn tekst med innerHTML
+  naturElement.innerHTML = "Natur er viktig for mennesker.";
+
+  // 2) Spør bruker med prompt
+  var svar = prompt("Hva er ditt favorittdyr?");
+
+  // Viser svaret i et p-element
+  var svarElement = document.getElementById("Svar");
+  svarElement.innerHTML = "Ditt favorittdyr er: " + svar;
+</script>
+
+</body>
+</html>

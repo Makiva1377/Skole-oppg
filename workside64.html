@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Kode 2 – Oppgaver</title>
+</head>
+<body>
+
+<script>
+
+  document.body.style.backgroundColor = "Grey";
+
+
+  // 1. Tekst-variabler og + 
+  var antallFrukt = "3";
+  var antallGronnsaker = "2";
+
+  var antallVarer = antallFrukt + antallGronnsaker;
+  document.write("Antall varer: " + antallVarer + "<br>");
+  // Resultat: 32 (tekst settes sammen)
+
+  // Hvis du fjerner anførselstegnene blir det:
+  // 3 + 2 = 5 (tall regnes sammen)
+
+  document.write("<br>");
+
+  // 2. Pris uten moms → pris med moms
+  var prisUtenMoms = prompt("Skriv inn pris uten moms:");
+  prisUtenMoms = Number(prisUtenMoms); // casting til tall
+
+  var prisMedMoms = prisUtenMoms * 1.25;
+  document.write("Pris med moms: " + prisMedMoms.toFixed(2) + "<br><br>");
+
+  // 3. Mobilabonnement
+  var datamengde = Number(prompt("Datamengde:"));
+  var antSamtaler = Number(prompt("Antall samtaler:"));
+  var ringetid = Number(prompt("Ringetid:"));
+  var antSMS = Number(prompt("Antall SMS:"));
+  var antMMS = Number(prompt("Antall MMS:"));
+
+  var pris = datamengde * 10 +
+             antSamtaler * 0.89 +
+             ringetid * 0.39 +
+             antSMS * 0.69 +
+             antMMS * 1.99;
+
+  document.write("Total pris: " + pris.toFixed(2) + "<br><br>");
+
+  // 4. Array med tekst
+  var varer = ["Eple", "Banan", "Pære", "Appelsin", "Druer"];
+  document.write("Siste verdi i arrayet: " + varer[4] + "<br><br>");
+  // или smartere: varer[varer.length - 1]
+
+  // 5. Objekter
+  var frukt1 = {
+    navn: "Eple",
+    pris: 10
+  };
+
+  var frukt2 = {
+    navn: "Banan",
+    pris: 8
+  };
+
+  var frukt3 = {
+    navn: "Pære",
+    pris: 12
+  };
+
+  // Bytter prisen på frukt2
+  frukt2.pris = 15;
+
+  document.write("Ny pris på frukt2: " + frukt2.pris);
+
+</script>
+
+</body>
+</html>

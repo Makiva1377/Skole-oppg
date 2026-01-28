@@ -1,2 +1,0 @@
-# Skole oppg
-Skole oppg
